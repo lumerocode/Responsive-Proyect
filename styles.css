@@ -4,6 +4,8 @@
 3. Tipografía
 4. Visuales
 5. Otros
+
+Nota: Por buenas prácticas no podemos tener más de h1 en nuestro proyecto
 */
 
 :root {
@@ -14,6 +16,7 @@
     --warm-black: #201E1C;
     --black: #000000;
     --grey: #BABABA;
+    --off-white: #FAF8F7;
     --just-white: #ffffff;
 }
 
@@ -37,6 +40,7 @@ header {
     min-width: 320px; /*Quiere decir que el width no se va hacer más chico de 320px, que es la dimensión más chica en los celulares*/
     height: 334px;
     text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);;
 }
 
 header img {
@@ -54,4 +58,46 @@ header img {
     margin-top: 40px;
     text-align: center;
     align-self: center;
+}
+
+.header--title-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header--title-container p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-orange);
+    margin-top: 24px;
+}
+
+.header--title-container .header--button {
+    position: absolute;
+    left: calc(50% - 118px);
+    top: 270px;
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 229px;
+    height: 48px;
+    background: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);/*Sombra*/
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.header--button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url(./assets/icons/down-arrow.svg);
 }
