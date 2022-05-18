@@ -414,18 +414,27 @@ main {
     color: #757575;
 }
 
-/*Scroll horizontal*/
 .plans-container--slider {
-    display: flex;
-    height: 316px;
-    overflow-x: scroll;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-areas: "a b c d e";
+    justify-items: center;
+}
+
+.plans-container--slider .card-one {
+    grid-area: b;
+}
+
+.plans-container--slider .card-two {
+    grid-area: c;
+}
+
+.plans-container--slider .card-three {
+    grid-area: d;
 }
 
 .plans-container--card {
     position: relative;
-    scroll-snap-align: center; /**Se coloca junto al codigo de arriba del scroll horizontal*/
     width: 70%;
     min-width: 190px;
     max-width: 300px;
@@ -533,3 +542,15 @@ footer .left ul {
     color: var(--just-white);
 }
 
+/* ===================== MEDIA QUERIES (MEDIUM DEVICES) ===================== */
+@media screen and (max-width: 1024px) {
+}
+
+/* ===================== MEDIA QUERIES (SMALL DEVICES) ===================== */
+@media screen and (max-width: 600px) {
+    .plans-container--slider {
+        display: flex;
+        place-content: center;
+        flex-wrap: wrap;
+    }
+}
